@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>דשבורד ביזנס</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>דשבורד ביזנס</h1>
+            <p>מידע וניתוח עסקי בזמן אמת</p>
+        </header>
+
+        <div class="dashboard">
+            <!-- כרטיסיות KPI -->
+            <section class="kpi-section">
+                <div class="kpi-card">
+                    <div class="kpi-header">
+                        <h3>הכנסות שנתיות</h3>
+                        <span class="kpi-icon">💰</span>
+                    </div>
+                    <div class="kpi-value" id="revenue">₪0</div>
+                    <p class="kpi-change positive">↑ 12% מהרבעון הקודם</p>
+                </div>
+
+                <div class="kpi-card">
+                    <div class="kpi-header">
+                        <h3>מספר לקוחות</h3>
+                        <span class="kpi-icon">👥</span>
+                    </div>
+                    <div class="kpi-value" id="customers">0</div>
+                    <p class="kpi-change positive">↑ 5% בחודש זה</p>
+                </div>
+
+                <div class="kpi-card">
+                    <div class="kpi-header">
+                        <h3>הזמנות פעילות</h3>
+                        <span class="kpi-icon">📦</span>
+                    </div>
+                    <div class="kpi-value" id="orders">0</div>
+                    <p class="kpi-change">ממוצע: 15 הזמנות ביום</p>
+                </div>
+
+                <div class="kpi-card">
+                    <div class="kpi-header">
+                        <h3>שביעות דעת</h3>
+                        <span class="kpi-icon">⭐</span>
+                    </div>
+                    <div class="kpi-value" id="satisfaction">0%</div>
+                    <p class="kpi-change">מתוך 5 כוכבים</p>
+                </div>
+            </section>
+
+            <!-- טבלת נתונים -->
+            <section class="data-section">
+                <h2>נתוני מכירות אחרונים</h2>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>תאריך</th>
+                            <th>מוצר</th>
+                            <th>כמות</th>
+                            <th>מחיר ליחידה</th>
+                            <th>סה"כ</th>
+                            <th>סטטוס</th>
+                        </tr>
+                    </thead>
+                    <tbody id="salesTable">
+                        <tr>
+                            <td>2026-06-08</td>
+                            <td>מוצר A</td>
+                            <td>10</td>
+                            <td>₪150</td>
+                            <td>₪1,500</td>
+                            <td><span class="status completed">הושלם</span></td>
+                        </tr>
+                        <tr>
+                            <td>2026-06-07</td>
+                            <td>מוצר B</td>
+                            <td>5</td>
+                            <td>₪200</td>
+                            <td>₪1,000</td>
+                            <td><span class="status pending">בהמתנה</span></td>
+                        </tr>
+                        <tr>
+                            <td>2026-06-06</td>
+                            <td>מוצר C</td>
+                            <td>15</td>
+                            <td>₪100</td>
+                            <td>₪1,500</td>
+                            <td><span class="status completed">הושלם</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- גרפים -->
+            <section class="charts-section">
+                <div class="chart">
+                    <h3>מכירות חודשיות</h3>
+                    <div class="bar-chart">
+                        <div class="bar-item">
+                            <div class="bar" style="height: 70%;"></div>
+                            <p>ינואר</p>
+                        </div>
+                        <div class="bar-item">
+                            <div class="bar" style="height: 85%;"></div>
+                            <p>פברואר</p>
+                        </div>
+                        <div class="bar-item">
+                            <div class="bar" style="height: 60%;"></div>
+                            <p>מרץ</p>
+                        </div>
+                        <div class="bar-item">
+                            <div class="bar" style="height: 90%;"></div>
+                            <p>אפריל</p>
+                        </div>
+                        <div class="bar-item">
+                            <div class="bar" style="height: 75%;"></div>
+                            <p>מאי</p>
+                        </div>
+                        <div class="bar-item">
+                            <div class="bar" style="height: 95%;"></div>
+                            <p>יוני</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chart">
+                    <h3>התפלגות מוצרים</h3>
+                    <div class="pie-chart">
+                        <div class="pie">
+                            <div class="pie-segment segment-1"></div>
+                            <div class="pie-segment segment-2"></div>
+                            <div class="pie-segment segment-3"></div>
+                        </div>
+                        <div class="pie-legend">
+                            <p><span class="legend-color" style="background: #FF6B6B;"></span> מוצר A (35%)</p>
+                            <p><span class="legend-color" style="background: #4ECDC4;"></span> מוצר B (40%)</p>
+                            <p><span class="legend-color" style="background: #FFE66D;"></span> מוצר C (25%)</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer class="footer">
+            <p>© 2026 דשבורד ביזנס | נתונים מעודכנים מ-Supabase</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
